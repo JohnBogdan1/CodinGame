@@ -18,7 +18,8 @@ while 1:
     
     directionX = ""
     directionY = ""
-    
+    # I find the path that Thor can follow to reach the light
+    # the direction is changed every turn
     if thorX > lightX:
         directionX = "W"
         thorX += 1
@@ -34,7 +35,7 @@ while 1:
         thorY += 1
     
  
-    
+    # directions can be: N NE E SE S SW W or NW
     output = str(directionY) + str(directionX)
 
     # Write an action using print
