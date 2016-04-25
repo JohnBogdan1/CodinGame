@@ -14,7 +14,7 @@ while 1:
     # Write an action using print
     # To debug: print >> sys.stderr, "Debug messages..."
     
-    # if an enemy is closer than the other, shoot the closer one
+    # if an enemy is closer than the other, shoot the closest one
     if dist1 < dist2:
         print enemy1
     else:
