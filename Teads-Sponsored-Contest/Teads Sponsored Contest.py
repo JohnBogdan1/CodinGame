@@ -22,28 +22,6 @@ for vertice in graph.values():
         break
     count += 1
 
-def DFS(G,v,seen=None,path=None):
-    if seen is None: seen = []
-    if path is None: path = [v]
-
-    seen.append(v)
-
-    paths = []
-    for t in G[v]:
-        if t not in seen:
-            t_path = path + [t]
-            paths.append(tuple(t_path))
-            #print >> sys.stderr, tuple(t_path)
-            paths.extend(DFS(G, t, seen, t_path))
-    return paths
-    
-def tuple_without(original_tuple, element_to_remove):
-    new_tuple = []
-    for s in list(original_tuple):
-        if not s == element_to_remove:
-            new_tuple.append(s)
-    return tuple(new_tuple)
-
 def find_path(graph, start):
     tuple = [start, start, 0]
     stack = []
@@ -76,8 +54,5 @@ def find_path(graph, start):
 
 distanta = find_path(graph, leaf_vertix)
 print (distanta)/2
-        
-#paths = DFS(graph,leaf_vertix)
-#print >> sys.stderr, leaf_vertix
-#print max(len(item) for item in paths)/2
+
 
