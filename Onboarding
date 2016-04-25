@@ -4,7 +4,6 @@ import sys, math
 # <---
 # Hint:To protect the planet, you can implement the pseudo-code provided in the statement, below the player.
 
-
 # game loop
 while 1:
     enemy1 = raw_input() # name of enemy 1
